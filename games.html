@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Wilson Zheng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="gravitationalGrid"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar-side-right">
+        <a href="index.html" class="nav-link" title="Home">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </a>
+        <a href="games.html" class="nav-link active" title="Games">
+            <span class="icon">🎮</span>
+            <span class="label">Games</span>
+        </a>
+        <a href="astrophotography.html" class="nav-link" title="Astrophotography">
+            <span class="icon">🌌</span>
+            <span class="label">Astro</span>
+        </a>
+    </nav>
+
+    <!-- Background Controls -->
+    <div class="controls-panel" id="controlsPanel">
+        <button class="controls-toggle" id="controlsToggle" aria-label="Toggle Controls">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
+            </svg>
+        </button>
+
+        <div class="controls-content" id="controlsContent">
+            <h3>Grid Controls</h3>
+
+            <div class="control-group">
+                <label class="toggle-label">
+                    <span>Grid Animation</span>
+                    <input type="checkbox" id="gridToggle" checked>
+                    <span class="toggle-switch"></span>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Grid Spacing: <span class="value" id="spacingValue">75</span>px
+                </label>
+                <input type="range" id="gridSpacing" min="20" max="100" value="75" step="5">
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Gravity Strength: <span class="value" id="strengthValue">250</span>
+                </label>
+                <input type="range" id="gravityStrength" min="0" max="500" value="250" step="10">
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Gravity Radius: <span class="value" id="radiusValue">300</span>px
+                </label>
+                <input type="range" id="gravityRadius" min="100" max="500" value="300" step="20">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>GAME PROJECTS</h1>
+                <p class="subtitle">Educational physics simulations and interactive experiences</p>
+            </div>
+        </section>
+
+        <!-- Games Grid -->
+        <section class="section">
+            <span class="section-tag">Featured Games</span>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎮</span>
+                        <p class="media-label">Game Demo Video/GIF</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Gravitational Waves Educational Game</h3>
+                        <p class="date">Jun 2024 – Sep 2024</p>
+                    </div>
+                    <p class="project-description">Educational game created in collaboration with UVA physics faculty teaching complex astrophysics concepts including black holes and gravitational waves. Features infinite world generation with physically accurate gravitational wave simulations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Physics Simulation</span>
+                        <span class="tech-tag">Procedural Generation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎮</span>
+                        <p class="media-label">Game Demo Video/GIF</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Game Project 2</h3>
+                        <p class="date">Coming Soon</p>
+                    </div>
+                    <p class="project-description">Placeholder for your next game project. Add gameplay videos, screenshots, and descriptions here.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Game Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎮</span>
+                        <p class="media-label">Game Demo Video/GIF</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Game Project 3</h3>
+                        <p class="date">Coming Soon</p>
+                    </div>
+                    <p class="project-description">Placeholder for another game project. Showcase your game development skills and creative projects here.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Gameplay</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Wilson Zheng</p>
+            <p class="footer-note">This site features physically accurate gravitational field distortions. Move your cursor to bend spacetime!</p>
+        </footer>
+    </div>
+
+    <script src="grid-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

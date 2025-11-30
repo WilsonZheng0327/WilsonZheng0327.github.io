@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilson Zheng | AI Engineer & Physicist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="gravitationalGrid"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar-side-right">
+        <a href="index.html" class="nav-link active" title="Home">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </a>
+        <a href="games.html" class="nav-link" title="Games">
+            <span class="icon">🎮</span>
+            <span class="label">Games</span>
+        </a>
+        <a href="astrophotography.html" class="nav-link" title="Astrophotography">
+            <span class="icon">🌌</span>
+            <span class="label">Astro</span>
+        </a>
+    </nav>
+
+    <!-- Background Controls -->
+    <div class="controls-panel" id="controlsPanel">
+        <button class="controls-toggle" id="controlsToggle" aria-label="Toggle Controls">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
+            </svg>
+        </button>
+
+        <div class="controls-content" id="controlsContent">
+            <h3>Grid Controls</h3>
+
+            <div class="control-group">
+                <label class="toggle-label">
+                    <span>Grid Animation</span>
+                    <input type="checkbox" id="gridToggle" checked>
+                    <span class="toggle-switch"></span>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Grid Spacing: <span class="value" id="spacingValue">75</span>px
+                </label>
+                <input type="range" id="gridSpacing" min="20" max="100" value="75" step="5">
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Gravity Strength: <span class="value" id="strengthValue">250</span>
+                </label>
+                <input type="range" id="gravityStrength" min="0" max="500" value="250" step="10">
+            </div>
+
+            <div class="control-group">
+                <label>
+                    Gravity Radius: <span class="value" id="radiusValue">300</span>px
+                </label>
+                <input type="range" id="gravityRadius" min="100" max="500" value="300" step="20">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>WILSON ZHENG</h1>
+                <p class="subtitle">ML Engineer • Full-Stack Developer<br>Game Lover • Astrophotographer</p>
+                <div class="hero-links">
+                    <a href="mailto:wilsonz@andrew.cmu.edu" class="link-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://github.com/wilsonzheng0327" target="_blank" class="link-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <span class="section-tag">About Me</span>
+            <div class="card">
+                <h2>Building AI solutions with a physics mindset</h2>
+                <p>I'm currently pursuing my Master's in Artificial Intelligence and Innovation at Carnegie Mellon University, building on my foundation in Computer Science and Physics from the University of Virginia (3.91 GPA, Echols Scholar).</p>
+                <p>My work spans from building AI-powered tools at Amazon Web Services to creating educational physics simulations with gravitational waves. I'm passionate about leveraging machine learning and cloud technologies to solve complex problems, bringing both computational and theoretical perspectives to every challenge.</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <span class="section-tag">Education</span>
+
+            <div class="card">
+                <div class="education-header">
+                    <div>
+                        <h3>Carnegie Mellon University</h3>
+                        <p class="degree">Master of Science in Artificial Intelligence and Innovation</p>
+                    </div>
+                    <div class="education-meta">
+                        <p class="date">Expected May 2027</p>
+                        <p class="location">Pittsburgh, PA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="education-header">
+                    <div>
+                        <h3>The University of Virginia</h3>
+                        <p class="degree">Bachelor's Degree in Computer Science & Physics</p>
+                    </div>
+                    <div class="education-meta">
+                        <p class="date">May 2025</p>
+                        <p class="location">Charlottesville, VA</p>
+                    </div>
+                </div>
+                <div class="honors">
+                    <span class="honor-badge">GPA: 3.91/4.0</span>
+                    <span class="honor-badge">Echols Scholar</span>
+                    <span class="honor-badge">College Science Scholar</span>
+                    <span class="honor-badge">Dean's List</span>
+                </div>
+                <div class="courses">
+                    <p class="courses-label">Relevant Courses:</p>
+                    <p>Data Structures & Algorithms, Software Development Methods, Computer Architecture, Machine Learning, Cybersecurity, Compilers, Operating System, Database Systems, Cloud Computing, Quantum Computing</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="section">
+            <span class="section-tag">Work Experience</span>
+
+            <div class="card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Software Development Engineer Intern</h3>
+                        <p class="company">Amazon Web Services</p>
+                    </div>
+                    <div class="experience-meta">
+                        <p class="date">Jun 2025 – Aug 2025</p>
+                        <p class="location">Beijing, China</p>
+                    </div>
+                </div>
+                <ul class="experience-list">
+                    <li>Engineered Amazon Q-powered AI unit test generation tool, achieving up to <strong>90% improvement</strong> in code coverage</li>
+                    <li>Integrated solution into Amazon's internal build system and CI/CD pipeline, enabling automatic test generation for development teams, cutting down manual testing effort by <strong>10 hours weekly</strong></li>
+                    <li>Deployed scalable cloud infrastructure on AWS utilizing SQS, Lambda, and containerized services</li>
+                    <li>Established multi-layered quality filters with <strong>100% reliability</strong> to remove LLM hallucinations</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Research Assistant, Game Developer</h3>
+                        <p class="company">University of Virginia</p>
+                    </div>
+                    <div class="experience-meta">
+                        <p class="date">Jun 2024 – Sep 2024</p>
+                        <p class="location">Charlottesville, VA</p>
+                    </div>
+                </div>
+                <ul class="experience-list">
+                    <li>Collaborated with University of Virginia physics faculty to create educational game teaching complex astrophysics concepts including <strong>black holes and gravitational waves</strong> in Unity</li>
+                    <li>Engineered infinite world generation system with physically accurate gravitational wave simulations, mimicking ripple effects with correct polarization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Machine Learning Engineer Intern</h3>
+                        <p class="company">DataMIMO</p>
+                    </div>
+                    <div class="experience-meta">
+                        <p class="date">May 2024 – Jul 2024</p>
+                        <p class="location">Palo Alto, CA</p>
+                    </div>
+                </div>
+                <ul class="experience-list">
+                    <li>Analyzed machine learning models to predict property values using NumPy and scikit-learn</li>
+                    <li>Created interactive data visualizations and sentiment analysis tools enabling clients to identify emerging market trends and investment opportunities</li>
+                    <li>Scraped web information with scripts using ChromeDriver and Selenium to enhance breadth of project datasets</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Data Analytics Intern</h3>
+                        <p class="company">L'Oréal</p>
+                    </div>
+                    <div class="experience-meta">
+                        <p class="date">Jun 2022 – Aug 2022</p>
+                        <p class="location">Shanghai, China</p>
+                    </div>
+                </div>
+                <ul class="experience-list">
+                    <li>Solved critical security vulnerability by developing automated Identity and Access Management system, preventing unauthorized project access and ensuring compliance on GCP with Pub/Sub, Cloud Scheduler, and Cloud Function</li>
+                    <li>Post-processed <strong>50,000+ consumer responses</strong> with Python Pandas, improved data organization and uniformity</li>
+                    <li>Implemented automated ML-based sentiment analysis system on GCP reducing manual analysis time</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <span class="section-tag">Featured Projects</span>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎬</span>
+                        <p class="media-label">Video/GIF Demo</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>AI Podcast Platform</h3>
+                        <p class="date">Oct 2025 – Present</p>
+                    </div>
+                    <p class="project-description">Architected AI-powered podcast generation platform for personalized podcasts interleaved with real users' stories. Engineered multi-modal ML pipeline integrating Whisper ASR, OpenAI embeddings for semantic vector search, GPT for conversation and script generation, and open-source Text-to-Speech models.</p>
+                    <p class="project-description">Implemented RAG-based AI host personality system with per-host knowledge bases, creating AI personas with curated expertise for contextually aware podcast commentary.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Whisper ASR</span>
+                        <span class="tech-tag">OpenAI Embeddings</span>
+                        <span class="tech-tag">GPT</span>
+                        <span class="tech-tag">Text-to-Speech</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Semantic Search</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎬</span>
+                        <p class="media-label">Video/GIF Demo</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Personal News Recommender</h3>
+                        <p class="date">Sep 2025 – Oct 2025</p>
+                    </div>
+                    <p class="project-description">Developed ML-powered news recommendation system with automated scraping pipeline, fine-tuned DistilBERT for topic classification, and FAISS-indexed semantic search over article embeddings.</p>
+                    <p class="project-description">Built FastAPI backend with Celery task queue for asynchronous article processing, PostgreSQL database, and Redis caching. Implemented scheduled jobs for hourly news ingestion and classification. Engineered recommendation engine combining content-based filtering using Sentence Transformers and collaborative filtering with matrix factorization algorithms.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">DistilBERT</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Sentence Transformers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-media">
+                    <div class="video-placeholder">
+                        <span class="media-icon">🎬</span>
+                        <p class="media-label">Video/GIF Demo</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Hand Gesture-Based Keyboard Controller</h3>
+                        <p class="date">Mar 2025 – May 2025</p>
+                    </div>
+                    <p class="project-description">Developed a real-time computer vision-powered hand gesture recognition system with PyTorch and OpenCV, achieving <strong>95% confidence</strong> for gesture classification across 12 distinct hand poses captured via webcam feed.</p>
+                    <p class="project-description">Built gesture-to-keyboard mapping application motivated by accessibility and hands-free computing needs.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Real-time Processing</span>
+                        <span class="tech-tag">Accessibility</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Wilson Zheng</p>
+            <p class="footer-note">This site features physically accurate gravitational field distortions. Move your cursor to bend spacetime!</p>
+        </footer>
+    </div>
+
+    <script src="grid-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
