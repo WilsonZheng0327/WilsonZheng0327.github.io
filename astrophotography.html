@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <canvas id="gravitationalGrid"></canvas>
 
@@ -81,98 +85,23 @@
         </section>
 
         <!-- Gallery Grid -->
-        <section class="section">
-            <span class="section-tag">Gallery</span>
-
-            <!-- Photo Card 1 -->
-            <div class="card astro-card">
-                <div class="astro-image">
-                    <div class="image-placeholder">
-                        <span class="media-icon">🌌</span>
-                        <p class="media-label">Your Astrophoto Here</p>
-                    </div>
-                </div>
-                <div class="astro-info">
-                    <h3>Deep Sky Object 1</h3>
-                    <p class="astro-details">
-                        <span class="detail-item"><strong>Object:</strong> [Galaxy/Nebula Name]</span>
-                        <span class="detail-item"><strong>Date:</strong> [Capture Date]</span>
-                        <span class="detail-item"><strong>Exposure:</strong> [Total Integration Time]</span>
-                        <span class="detail-item"><strong>Equipment:</strong> [Telescope/Camera Setup]</span>
-                    </p>
-                    <p class="astro-description">Add a description of the object, capture conditions, and any interesting details about the imaging process.</p>
-                </div>
-            </div>
-
-            <!-- Photo Card 2 -->
-            <div class="card astro-card">
-                <div class="astro-image">
-                    <div class="image-placeholder">
-                        <span class="media-icon">🌌</span>
-                        <p class="media-label">Your Astrophoto Here</p>
-                    </div>
-                </div>
-                <div class="astro-info">
-                    <h3>Deep Sky Object 2</h3>
-                    <p class="astro-details">
-                        <span class="detail-item"><strong>Object:</strong> [Galaxy/Nebula Name]</span>
-                        <span class="detail-item"><strong>Date:</strong> [Capture Date]</span>
-                        <span class="detail-item"><strong>Exposure:</strong> [Total Integration Time]</span>
-                        <span class="detail-item"><strong>Equipment:</strong> [Telescope/Camera Setup]</span>
-                    </p>
-                    <p class="astro-description">Share details about this capture, including processing techniques and any challenges you encountered.</p>
-                </div>
-            </div>
-
-            <!-- Photo Card 3 -->
-            <div class="card astro-card">
-                <div class="astro-image">
-                    <div class="image-placeholder">
-                        <span class="media-icon">🌌</span>
-                        <p class="media-label">Your Astrophoto Here</p>
-                    </div>
-                </div>
-                <div class="astro-info">
-                    <h3>Deep Sky Object 3</h3>
-                    <p class="astro-details">
-                        <span class="detail-item"><strong>Object:</strong> [Galaxy/Nebula Name]</span>
-                        <span class="detail-item"><strong>Date:</strong> [Capture Date]</span>
-                        <span class="detail-item"><strong>Exposure:</strong> [Total Integration Time]</span>
-                        <span class="detail-item"><strong>Equipment:</strong> [Telescope/Camera Setup]</span>
-                    </p>
-                    <p class="astro-description">Document your astrophotography journey and technical details here.</p>
-                </div>
-            </div>
-
-            <!-- Photo Card 4 -->
-            <div class="card astro-card">
-                <div class="astro-image">
-                    <div class="image-placeholder">
-                        <span class="media-icon">🌌</span>
-                        <p class="media-label">Your Astrophoto Here</p>
-                    </div>
-                </div>
-                <div class="astro-info">
-                    <h3>Planetary/Lunar Image</h3>
-                    <p class="astro-details">
-                        <span class="detail-item"><strong>Object:</strong> [Planet/Moon]</span>
-                        <span class="detail-item"><strong>Date:</strong> [Capture Date]</span>
-                        <span class="detail-item"><strong>Frames:</strong> [Number of frames stacked]</span>
-                        <span class="detail-item"><strong>Equipment:</strong> [Telescope/Camera Setup]</span>
-                    </p>
-                    <p class="astro-description">Perfect for showcasing planetary or lunar photography.</p>
-                </div>
-            </div>
+        <!-- Gallery Grid -->
+        <div id="gallery-grid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2025 Wilson Zheng</p>
-            <p class="footer-note">This site features physically accurate gravitational field distortions. Move your cursor to bend spacetime!</p>
+            <p class="footer-note">This site features physically accurate gravitational field distortions. Move your
+                cursor to bend spacetime!</p>
         </footer>
     </div>
 
     <script src="grid-background.js"></script>
+    <script src="astrophotography.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -828,6 +828,15 @@ p:last-child {
 
 .astro-image {
     width: 100%;
+    padding: 20px;
+}
+
+.astro-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
 }
 
 .image-placeholder {
@@ -876,7 +885,6 @@ p:last-child {
 .astro-description {
     color: var(--text-secondary);
     line-height: 1.8;
-    font-style: italic;
 }
 
 /* Mobile responsive for navbar */
