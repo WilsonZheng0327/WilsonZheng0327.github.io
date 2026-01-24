@@ -24,11 +24,52 @@ window.addEventListener('DOMContentLoaded', () => {
     const strengthValue = document.getElementById('strengthValue');
     const radiusValue = document.getElementById('radiusValue');
 
+    // Helper to save settings
+    const saveSettings = () => {
+        const settings = {
+            animationEnabled: gridToggle.checked,
+            spacing: parseInt(gridSpacingInput.value),
+            strength: parseInt(gravityStrengthInput.value),
+            radius: parseInt(gravityRadiusInput.value)
+        };
+        localStorage.setItem('gridSettings', JSON.stringify(settings));
+    };
+
+    // Load settings from localStorage
+    const savedSettings = JSON.parse(localStorage.getItem('gridSettings'));
+    if (savedSettings) {
+        if (savedSettings.animationEnabled !== undefined) {
+            gridToggle.checked = savedSettings.animationEnabled;
+        }
+        if (savedSettings.spacing) {
+            gridSpacingInput.value = savedSettings.spacing;
+            spacingValue.textContent = savedSettings.spacing;
+        }
+        if (savedSettings.strength) {
+            gravityStrengthInput.value = savedSettings.strength;
+            strengthValue.textContent = savedSettings.strength;
+        }
+        if (savedSettings.radius) {
+            gravityRadiusInput.value = savedSettings.radius;
+            radiusValue.textContent = savedSettings.radius;
+        }
+    }
+
+    // Apply initial settings to grid if it exists
+    if (window.gravitationalGrid) {
+        window.gravitationalGrid.animationEnabled = gridToggle.checked;
+        window.gravitationalGrid.gridSpacing = parseInt(gridSpacingInput.value);
+        window.gravitationalGrid.gravitationalStrength = parseInt(gravityStrengthInput.value);
+        window.gravitationalGrid.gravitationalRadius = parseInt(gravityRadiusInput.value);
+        window.gravitationalGrid.resizeCanvas();
+    }
+
     // Toggle grid animation
     gridToggle.addEventListener('change', (e) => {
         if (window.gravitationalGrid) {
             window.gravitationalGrid.animationEnabled = e.target.checked;
         }
+        saveSettings();
     });
 
     // Update grid spacing
@@ -39,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
             window.gravitationalGrid.gridSpacing = value;
             window.gravitationalGrid.resizeCanvas();
         }
+        saveSettings();
     });
 
     // Update gravity strength
@@ -48,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.gravitationalGrid) {
             window.gravitationalGrid.gravitationalStrength = value;
         }
+        saveSettings();
     });
 
     // Update gravity radius
@@ -57,6 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.gravitationalGrid) {
             window.gravitationalGrid.gravitationalRadius = value;
         }
+        saveSettings();
     });
 });
 
@@ -120,18 +164,18 @@ window.addEventListener('scroll', () => {
 
 // Prevent parallax on hover
 document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
     });
 
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         this.style.transition = 'transform 0.8s ease, box-shadow 0.3s ease';
     });
 });
 
 // Video placeholder interaction (for future video/GIF integration)
 document.querySelectorAll('.video-placeholder').forEach(placeholder => {
-    placeholder.addEventListener('click', function() {
+    placeholder.addEventListener('click', function () {
         // Placeholder for future functionality
         console.log('Video placeholder clicked - ready for media integration');
     });
