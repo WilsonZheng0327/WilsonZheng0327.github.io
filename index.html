@@ -210,57 +210,73 @@
                 </ul>
             </div>
 
-            <div class="card">
-                <div class="experience-header">
-                    <div>
-                        <h3>Research Assistant, Game Developer</h3>
-                        <p class="company">University of Virginia</p>
-                    </div>
-                    <div class="experience-meta">
-                        <p class="date">Jun 2024 – Sep 2024</p>
-                        <p class="location">Charlottesville, VA</p>
-                    </div>
-                </div>
-                <ul class="experience-list">
-                    <li>Collaborated with University of Virginia physics faculty to create <strong>educational game</strong> teaching complex astrophysics concepts including <strong>black holes and gravitational waves</strong> in Unity</li>
-                    <li>Engineered infinite world generation system with physically accurate gravitational wave simulations, mimicking ripple effects with correct polarization</li>
-                </ul>
+            <div class="earlier-experiences-toggle" id="outerEarlierToggle">
+                <button class="toggle-earlier-btn" onclick="toggleEarlierExperiences()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    See earlier experiences
+                </button>
             </div>
 
-            <div class="card">
-                <div class="experience-header">
-                    <div>
-                        <h3>Machine Learning Engineer Intern</h3>
-                        <p class="company">DataMIMO</p>
+            <div id="earlierExperiences" class="earlier-experiences-content" style="display:none;">
+                <div class="card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Research Assistant, Game Developer</h3>
+                            <p class="company">University of Virginia</p>
+                        </div>
+                        <div class="experience-meta">
+                            <p class="date">Jun 2024 – Sep 2024</p>
+                            <p class="location">Charlottesville, VA</p>
+                        </div>
                     </div>
-                    <div class="experience-meta">
-                        <p class="date">May 2024 – Jul 2024</p>
-                        <p class="location">Palo Alto, CA</p>
-                    </div>
+                    <ul class="experience-list">
+                        <li>Collaborated with University of Virginia physics faculty to create <strong>educational game</strong> teaching complex astrophysics concepts including <strong>black holes and gravitational waves</strong> in Unity</li>
+                        <li>Engineered infinite world generation system with physically accurate gravitational wave simulations, mimicking ripple effects with correct polarization</li>
+                    </ul>
                 </div>
-                <ul class="experience-list">
-                    <li>Analyzed machine learning models to predict property values using NumPy and scikit-learn</li>
-                    <li>Created interactive data visualizations and sentiment analysis tools enabling clients to identify emerging market trends and investment opportunities</li>
-                    <li>Scraped web information with scripts using ChromeDriver and Selenium to enhance breadth of project datasets</li>
-                </ul>
-            </div>
 
-            <div class="card">
-                <div class="experience-header">
-                    <div>
-                        <h3>Data Analytics Intern</h3>
-                        <p class="company">L'Oréal</p>
+                <div class="card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Machine Learning Engineer Intern</h3>
+                            <p class="company">DataMIMO</p>
+                        </div>
+                        <div class="experience-meta">
+                            <p class="date">May 2024 – Jul 2024</p>
+                            <p class="location">Palo Alto, CA</p>
+                        </div>
                     </div>
-                    <div class="experience-meta">
-                        <p class="date">Jun 2022 – Aug 2022</p>
-                        <p class="location">Shanghai, China</p>
-                    </div>
+                    <ul class="experience-list">
+                        <li>Analyzed machine learning models to predict property values using NumPy and scikit-learn</li>
+                        <li>Created interactive data visualizations and sentiment analysis tools enabling clients to identify emerging market trends and investment opportunities</li>
+                        <li>Scraped web information with scripts using ChromeDriver and Selenium to enhance breadth of project datasets</li>
+                    </ul>
                 </div>
-                <ul class="experience-list">
-                    <li>Solved critical security vulnerability by developing automated Identity and Access Management system, preventing unauthorized project access and ensuring compliance on GCP with Pub/Sub, Cloud Scheduler, and Cloud Function</li>
-                    <li>Post-processed 50,000+ consumer responses with Python Pandas, improved data organization and uniformity</li>
-                    <li>Implemented automated ML-based sentiment analysis system on GCP reducing manual analysis time</li>
-                </ul>
+
+                <div class="card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Data Analytics Intern</h3>
+                            <p class="company">L'Oréal</p>
+                        </div>
+                        <div class="experience-meta">
+                            <p class="date">Jun 2022 – Aug 2022</p>
+                            <p class="location">Shanghai, China</p>
+                        </div>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Solved critical security vulnerability by developing automated Identity and Access Management system, preventing unauthorized project access and ensuring compliance on GCP with Pub/Sub, Cloud Scheduler, and Cloud Function</li>
+                        <li>Post-processed 50,000+ consumer responses with Python Pandas, improved data organization and uniformity</li>
+                        <li>Implemented automated ML-based sentiment analysis system on GCP reducing manual analysis time</li>
+                    </ul>
+                </div>
+
+                <div class="earlier-experiences-toggle">
+                    <button class="toggle-earlier-btn" onclick="toggleEarlierExperiences()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        Collapse
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -277,7 +293,7 @@
                         <h3>SGLang-Omni Contributor</h3>
                         <p class="date">June 2026 – Present</p>
                     </div>
-                    <p class="project-description">Open-source contributor to SGLang-Omni, primarily working on ASR model serving optimization for the Fun-ASR-Nano pipeline.</p>
+                    <p class="project-description">Open-source contributor to SGLang-Omni, primarily working on ASR model serving optimization.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">PyTorch</span>

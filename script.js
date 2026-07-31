@@ -199,6 +199,14 @@ document.addEventListener('keydown', (e) => {
 let konamiCode = [];
 const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
 
+function toggleEarlierExperiences() {
+    const content = document.getElementById('earlierExperiences');
+    const outerToggle = document.getElementById('outerEarlierToggle');
+    const isHidden = content.style.display === 'none';
+    content.style.display = isHidden ? 'flex' : 'none';
+    if (outerToggle) outerToggle.style.display = isHidden ? 'none' : 'flex';
+}
+
 document.addEventListener('keydown', (e) => {
     konamiCode.push(e.code);
     konamiCode = konamiCode.slice(-10);
